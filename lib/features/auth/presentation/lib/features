@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Login"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: [
+
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Email",
+                border: OutlineInputBorder(),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Password",
+                border: OutlineInputBorder(),
+              ),
+            ),
+
+            SizedBox(height: 24),
+
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text("Login"),
+              ),
+            ),
+
+            TextButton(
+              onPressed: () {},
+              child: const Text("Forgot Password?"),
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}import '../../features/auth/presentation/login_screen.dart';GoRoute(
+  path: '/login',
+  builder: (context, state) => const LoginScreen(),
+),welcome_screen.dartonPressed: (){
+   context.go('/login');
+},import 'package:go_router/go_router.dart';git add .
+git commit -m "Sprint 2: Add login screen and routing"
+git push origin develop
